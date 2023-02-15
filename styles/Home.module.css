@@ -15,14 +15,27 @@
   list-style: none;
   margin: 0 24px;
 }
-.heroSection {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 50px 0;
 }
 .heroSectionHeader {
   margin: 20px 0;
+}
+.imageWrap {
+  padding: 10px;
+}
+.heroImage {
+  width: 237px;
+  height: 158px;
+  border-radius: 20px;
+}
+.blogItem {
+  margin: 10px 0;
+}
+.blogItem p {
+  margin: 10px 0;
 }

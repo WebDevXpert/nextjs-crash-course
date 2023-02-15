@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.main {
+  padding: 20px 50px;
+  width: 70%;
+}
+.main h1 {
+  margin-bottom: 1rem;
+}
+.main p {
+  margin-top: 1rem;
+}

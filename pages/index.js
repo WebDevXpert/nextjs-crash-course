@@ -1,12 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import Script from "next/script";
-import Link from "next/link";
-import Dummy from "@/components/dummy";
 
-const inter = Inter({ subsets: ["latin"] });
+import Image from "next/image";
+import heroImage from "../public/hero-image.jpg";
 
 export default function Home() {
   return (
@@ -17,40 +14,42 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script src="/sc.js" strategy="lazyOnload"></Script>
-      <nav className={styles.mainnav}>
-        <ul>
-          <Link href="/">
-            <li>Home</li>
-          </Link>
-          <Link href="/about">
-            <li>About</li>
-          </Link>
-          <Link href="/blog">
-            <li>Blog</li>
-          </Link>
-          <Link href="/contact">
-            <li>Contact</li>
-          </Link>
-        </ul>
-      </nav>
-      {/* <Dummy /> */}
-      <main className={styles.heroSection}>
+
+      <main className={styles.container}>
+        <style>
+          {`
+            h2{
+              font-size:38px;
+            }
+            h3{
+              font-size:28px;
+            }
+
+          `}
+        </style>
         <div className={styles.heroSectionHeader}>
           <h1>Hunting Coder</h1>
           <p>A blog for hunting coders by a hunting coder</p>
         </div>
+        <div className={styles.imageWrap}>
+          <Image
+            src={heroImage}
+            alt="hero section"
+            className={styles.heroImage}
+          />
+        </div>
         <div>
-          <div className="blogItem">
-            <h1>How to learn Javascript in 2023</h1>
+          <h2>Popular Blogs</h2>
+          <div className={styles.blogItem}>
+            <h3>How to learn Javascript in 2023</h3>
             <p>Javascript is the language use to design logic for the web</p>
           </div>
-          <div className="blogItem">
-            <h1>How to learn Javascript in 2023</h1>
+          <div className={styles.blogItem}>
+            <h3>How to learn Javascript in 2023</h3>
             <p>Javascript is the language use to design logic for the web</p>
           </div>
-          <div className="blogItem">
-            <h1>How to learn Javascript in 2023</h1>
+          <div className={styles.blogItem}>
+            <h3>How to learn Javascript in 2023</h3>
             <p>Javascript is the language use to design logic for the web</p>
           </div>
         </div>
